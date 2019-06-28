@@ -1,1 +1,1 @@
-dumpbin /EXPORTS C:\dev\tests\template_specialisation_export_test\build\tempspecexport\DynamicLibraryWithExports\Debug\bin\DynamicLibraryWithExports.dll
+dumpbin /EXPORTS build\tempspecexport\DynamicLibraryWithExports\Debug\bin\DynamicLibraryWithExports.dll

@@ -7,6 +7,8 @@
     #else
         #define LIB_API __declspec(dllimport)
     #endif
+#else
+    #define LIB_API __attribute__((visibility("default")))
 #endif
 #if !defined(LIB_API)
     #define LIB_API /* do nothing */
@@ -20,8 +22,9 @@ do_something(const T& input)
     return "an unspecialised type";
 }
 
-#if defined(_MSC_VER)
-// Must have the template specialisation declared here
+#if defined(_MSC_VER) || defined(__APPLE__)
+// Must have the template specialisation declared here or other translation
+// units are not aware that a specialisation exists
 template<>
 LIB_API const char*
 do_something<int>(const int& input);
