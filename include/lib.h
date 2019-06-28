@@ -22,7 +22,7 @@ do_something(const T& input)
     return "an unspecialised type";
 }
 
-#if defined(_MSC_VER) || defined(__APPLE__)
+#if defined(_MSC_VER) || defined(__APPLE__) || defined(__GNUC__)
 // Must have the template specialisation declared here or other translation
 // units are not aware that a specialisation exists
 template<>
