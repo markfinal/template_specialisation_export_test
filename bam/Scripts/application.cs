@@ -4,9 +4,9 @@ namespace tempspecexport
     class TestApp :
         C.Cxx.ConsoleApplication
     {
-        protected override void Init(Module parent)
+        protected override void Init()
         {
-            base.Init(parent);
+            base.Init();
 
             var source = this.CreateCxxSourceContainer("$(packagedir)/source/app.cpp");
             source.PrivatePatch(settings =>

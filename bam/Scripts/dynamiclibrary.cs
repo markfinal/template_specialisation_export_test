@@ -4,9 +4,9 @@ namespace tempspecexport
     class DynamicLibraryWithExports :
         C.Cxx.DynamicLibrary
     {
-        protected override void Init(Module parent)
+        protected override void Init()
         {
-            base.Init(parent);
+            base.Init();
 
             this.CreateHeaderContainer("$(packagedir)/include/*.h");
 
